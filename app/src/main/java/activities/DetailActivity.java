@@ -1,13 +1,13 @@
 package activities;
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
+        import android.support.annotation.Nullable;
+        import android.support.v7.widget.LinearLayoutManager;
+        import android.support.v7.widget.RecyclerView;
 
-import com.padcmyanmar.ted_assignment2.R;
+        import com.padcmyanmar.ted_assignment2.R;
 
-import adapters.NewsDetailAdapter;
+        import adapters.NewsDetailAdapter;
 
 public class DetailActivity extends BaseActivity
 {
@@ -20,5 +20,6 @@ public class DetailActivity extends BaseActivity
         NewsDetailAdapter newsDetailAdapter=new NewsDetailAdapter();
         rvNewsDetail.setAdapter(newsDetailAdapter);
         rvNewsDetail.setLayoutManager(new LinearLayoutManager(getApplicationContext(),LinearLayoutManager.VERTICAL,false));
+        rvNewsDetail.setFocusable(false);
     }
 }

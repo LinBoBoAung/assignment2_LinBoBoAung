@@ -15,6 +15,7 @@ import android.view.MenuItem;
 import com.padcmyanmar.ted_assignment2.R;
 
 import adapters.NewsAdapter;
+import data.models.TEDModel;
 import delegates.NewsDelegate;
 
 public class MainActivity extends BaseActivity implements NewsDelegate {
@@ -39,6 +40,7 @@ public class MainActivity extends BaseActivity implements NewsDelegate {
         rvNews.setAdapter(newsAdapter);
         rvNews.setLayoutManager(new LinearLayoutManager(getApplicationContext(),LinearLayoutManager.VERTICAL,false));
 
+        TEDModel.getObjInstance().loadTEDTalk();
 
 
     }
